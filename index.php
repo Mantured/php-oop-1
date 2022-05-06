@@ -28,10 +28,15 @@ class Movie {
 
 $hulk = new Movie('Hulk', 'classico fil marvel salta spara salta schiva e spara salvo il mondo che poi significa salvare NYC', 'action', null , '31 December 1992');
 var_dump($hulk);
+$theFifthElement = new Movie('The Fifth Element', 'io metto le mani avanti, persino il regista non sa di che parla il film', 'sci-fi/action', null, '20 August 1997');
+var_dump($theFifthElement);
 
 
-$hulk -> setReview("ridatemi il tempo che ho perso");
 
-var_dump($hulk)
+$theFifthElement -> setReview("ridatemi il tempo che ho perso, maledetto ImDB, mi hai trollato");
+
+
+var_dump($theFifthElement)
+
 
 ?>
