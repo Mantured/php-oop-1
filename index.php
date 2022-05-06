@@ -21,7 +21,39 @@ include ('./data/movies.php')
         <section class="container">
             <div class="row justify-content-center align-items-center my-height">
                 <div class="col-6">
-                    <?php foreach($theFifthElement as $key => $info) {?>
+                <div class="row">
+                    <div class="col-4">
+                        <h5 class="text-uppercase text-warning"> title: </h5>
+                    </div>
+                    <div class="col-6">
+                        <p><?= $theFifthElement -> getTitle() ?></p>
+                    </div>
+                    <div class="col-4">
+                        <h5 class="text-uppercase text-warning"> description: </h5>
+                    </div>
+                    <div class="col-6">
+                        <p><?= $theFifthElement -> getDescription() ?></p>
+                    </div>
+                    <div class="col-4">
+                        <h5 class="text-uppercase text-warning"> genre: </h5>
+                    </div>
+                    <div class="col-6">
+                        <p><?= $theFifthElement -> getGenre() ?></p>
+                    </div>
+                    <div class="col-4">
+                        <h5 class="text-uppercase text-warning"> reviews: </h5>
+                    </div>
+                    <div class="col-6">
+                        <p><?= $theFifthElement -> getReviews() ?></p>
+                    </div>
+                    <div class="col-4">
+                        <h5 class="text-uppercase text-warning"> year: </h5>
+                    </div>
+                    <div class="col-6">
+                        <p><?= $theFifthElement -> getYear() ?></p>
+                    </div>
+                </div>
+                    <!-- <?php foreach($theFifthElement as $key => $info) {?>
                         <div class="row">
                             <div class="col-4">
                                 <h5 class="text-uppercase text-danger"> <?php echo $key ;?> : </h5>
@@ -30,11 +62,44 @@ include ('./data/movies.php')
                                 <p> <?php echo $info;?></p>
                             </div>
                         </div>
-                    <?php }?>
-                </div>
-                <div class="col-6">
+                        <?php }?> -->
+                    </div>
                     <?php $hulk -> setReview("ridatemi il tempo perso, pero in html");?>
-                    <?php foreach($hulk as $key => $info) {?>
+                    <div class="col-6">
+                        <div class="row">
+                        <div class="col-4">
+                            <h5 class="text-uppercase text-warning"> title: </h5>
+                        </div>
+                        <div class="col-6">
+                            <p><?= $hulk -> getTitle() ?></p>
+                        </div>
+                        <div class="col-4">
+                            <h5 class="text-uppercase text-warning"> description: </h5>
+                        </div>
+                        <div class="col-6">
+                            <p><?= $hulk -> getDescription() ?></p>
+                        </div>
+                        <div class="col-4">
+                            <h5 class="text-uppercase text-warning"> genre: </h5>
+                        </div>
+                        <div class="col-6">
+                            <p><?= $hulk -> getGenre() ?></p>
+                        </div>
+                        <div class="col-4">
+                            <h5 class="text-uppercase text-warning"> reviews: </h5>
+                        </div>
+                        <div class="col-6">
+                            <p><?= $hulk -> getReviews() ?></p>
+                        </div>
+                        <div class="col-4">
+                            <h5 class="text-uppercase text-warning"> year: </h5>
+                        </div>
+                        <div class="col-6">
+                            <p><?= $hulk -> getYear() ?></p>
+                        </div>
+                    </div>
+                    
+                    <!-- <?php foreach($hulk as $key => $info) {?>
                         <div class="row">
                             <div class="col-4">
                                 <h5 class="text-uppercase text-warning"> <?php echo $key ;?> : </h5>
@@ -43,7 +108,7 @@ include ('./data/movies.php')
                                 <p> <?php echo $info;?></p>
                             </div>
                         </div>
-                    <?php }?>
+                    <?php }?> -->
                 </div>
             </div>
         </section>

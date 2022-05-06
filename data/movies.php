@@ -3,16 +3,16 @@
 
 
 class Movie {
-    public $title;
+    /* public $title;
     public $description;
     public $genre;
     public $reviews;
-    public $year;
-/*  protected $title;
+    public $year; */
+    protected $title;
     protected $description;
     protected $genre;
     protected $reviews;
-    private $exitDate; */
+    protected $year;
 
     public function __construct($title, $description, $genre, $reviews, $year)
     {
@@ -20,7 +20,6 @@ class Movie {
         $this -> description = $description;
         $this -> genre = $genre;
         $this -> reviews = $reviews;
-        /* $this -> exitData = $exitData; */
         $this -> year = $year;
     }
 
@@ -31,6 +30,23 @@ class Movie {
             $this -> reviews = 'ATTENZIONE il valore inserito non é vaildo';
         }
     }
+
+    public function getTitle(){
+        return $this -> title;
+    }
+    public function getDescription(){
+        return $this -> description;
+    }
+    public function getGenre(){
+        return $this -> genre;
+    }
+    public function getReviews(){
+        return $this -> reviews;
+    }
+    public function getYear(){
+        return $this -> year;
+    }
+
 
 }
 
