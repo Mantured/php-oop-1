@@ -1,46 +1,52 @@
 <?php 
-
-
-class Movie {
-    protected $title;
-    protected $description;
-    protected $genre;
-    protected $reviews;
-    private $exitDate;
-
-    public function __construct($title, $description, $genre, $reviews = null, $exitData)
-    {
-        $this -> title = $title;
-        $this -> description = $description;
-        $this -> genre = $genre;
-        $this -> reviews = $reviews;
-        $this -> exitData = $exitData;
-    }
-
-    public function setReview($reviews) {
-        if( is_string($reviews) && strlen($reviews) > 3 ) {
-            $this -> reviews = $reviews;
-        } else {
-            $this -> reviews = 'ATTENZIONE il valore inserito non é vaildo';
-        }
-    }
-
-}
-
-
-$hulk = new Movie('Hulk', 'classico fil marvel salta spara salta schiva e spara salvo il mondo che poi significa salvare NYC', 'action', null , '31 December 1992');
-var_dump($hulk);
-$theFifthElement = new Movie('The Fifth Element', 'io metto le mani avanti, persino il regista non sa di che parla il film', 'sci-fi/action', null, '20 August 1997');
-var_dump($theFifthElement);
-
-
-
-/* $theFifthElement -> setReview("123"); */
-/* $theFifthElement -> setReview("ci"); */
-$theFifthElement -> setReview("ridatemi il tempo che ho perso, maledetto ImDB, mi hai trollato");
-
-
-var_dump($theFifthElement)
-
-
+include ('./data/movies.php')
 ?>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PHP OOP</title>
+
+    <!-- bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <main class="bg-dark text-white" >
+        <section class="container">
+            <div class="row justify-content-center align-items-center my-height">
+                <div class="col-6">
+                    <?php foreach($theFifthElement as $key => $info) {?>
+                        <div class="row">
+                            <div class="col-4">
+                                <h5 class="text-uppercase text-danger"> <?php echo $key ;?> : </h5>
+                            </div>
+                            <div class="col-6">
+                                <p> <?php echo $info;?></p>
+                            </div>
+                        </div>
+                    <?php }?>
+                </div>
+                <div class="col-6">
+                    <?php $hulk -> setReview("ridatemi il tempo perso, pero in html");?>
+                    <?php foreach($hulk as $key => $info) {?>
+                        <div class="row">
+                            <div class="col-4">
+                                <h5 class="text-uppercase text-warning"> <?php echo $key ;?> : </h5>
+                            </div>
+                            <div class="col-6">
+                                <p> <?php echo $info;?></p>
+                            </div>
+                        </div>
+                    <?php }?>
+                </div>
+            </div>
+        </section>
+    </main>    
+</body>
+</html>
