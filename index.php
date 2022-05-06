@@ -18,8 +18,10 @@ class Movie {
     }
 
     public function setReview($reviews) {
-        if( strlen($reviews) > 3 ) {
+        if( is_string($reviews) && strlen($reviews) > 3 ) {
             $this -> reviews = $reviews;
+        } else {
+            $this -> reviews = 'ATTENZIONE il valore inserito non é vaildo';
         }
     }
 
@@ -33,6 +35,8 @@ var_dump($theFifthElement);
 
 
 
+/* $theFifthElement -> setReview("123"); */
+/* $theFifthElement -> setReview("ci"); */
 $theFifthElement -> setReview("ridatemi il tempo che ho perso, maledetto ImDB, mi hai trollato");
 
 
