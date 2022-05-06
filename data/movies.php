@@ -14,12 +14,12 @@ class Movie {
     protected $reviews;
     protected $year;
 
-    public function __construct($title, $description, $genre, $reviews, $year)
+    public function __construct($title, $description, $genre, $reviews = null, $year)
     {
         $this -> title = $title;
         $this -> description = $description;
         $this -> genre = $genre;
-        $this -> reviews = $reviews;
+        $this -> setReview($reviews);
         $this -> year = $year;
     }
 
@@ -47,12 +47,11 @@ class Movie {
         return $this -> year;
     }
 
-
 }
 
 
-$hulk = new Movie('Hulk', 'classico fil marvel salta spara salta schiva e spara salvo il mondo che poi significa salvare NYC', 'action', '', 1992);
-$theFifthElement = new Movie('The Fifth Element', 'io metto le mani avanti, persino il regista non sa di che parla il film', 'sci-fi/action','', 1997);
+$hulk = new Movie('Hulk', 'classico fil marvel salta spara salta schiva e spara salvo il mondo che poi significa salvare NYC', 'action', null , 1992);
+$theFifthElement = new Movie('The Fifth Element', 'io metto le mani avanti, persino il regista non sa di che parla il film', 'sci-fi/action', null, 1997);
 
 
 
@@ -60,7 +59,10 @@ $theFifthElement = new Movie('The Fifth Element', 'io metto le mani avanti, pers
 /* $theFifthElement -> setReview("123"); */
 /* $theFifthElement -> setReview("ci"); */
 $theFifthElement -> setReview("ridatemi il tempo che ho perso, maledetto ImDB, mi hai trollato");
+
+
 ?>
+
 
 
 

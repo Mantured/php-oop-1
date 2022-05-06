@@ -55,7 +55,7 @@ include ('./data/movies.php')
                 </div>
                     <!-- <?php foreach($theFifthElement as $key => $info) {?>
                         <div class="row">
-                            <div class="col-4">
+                            <div class="col-4">s
                                 <h5 class="text-uppercase text-danger"> <?php echo $key ;?> : </h5>
                             </div>
                             <div class="col-6">
